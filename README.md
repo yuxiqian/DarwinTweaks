@@ -1,6 +1,24 @@
 # DarwinTweaks
 一些 macOS Tweaks
 
+## 减少菜单栏图标间距
+
+macOS Big Sur 对图形界面进行了大修改，同时（离谱地）增大了菜单栏图标的间距，对刘海屏非常不友好。
+
+使用下面的命令还原小间距：
+
+```shell
+defaults -currentHost write -globalDomain NSStatusItemSpacing -int 6
+defaults -currentHost write -globalDomain NSStatusItemSelectionPadding -int 6
+```
+
+使用下面的命令回到默认间距：
+
+```shell
+defaults -currentHost delete -globalDomain NSStatusItemSelectionPadding
+defaults -currentHost delete -globalDomain NSStatusItemSpacing
+```
+
 ## 无延迟弹出 Dock 栏
 
 默认状态下，自动隐藏的 Dock 栏在弹出时存在 0.5 秒的延迟。
