@@ -45,7 +45,7 @@ defaults write -g NSWindowShouldDragOnGesture -bool true
 sudo sed -i ".bak" '2s/^/auth       sufficient     pam_tid.so\'$'\n/g' /etc/pam.d/sudo
 ```
 
-后，即可使用 Touch ID 来授权 `sudo`。 ![Sudo with Touch ID](./README.assets/%E6%88%AA%E5%B1%8F2023-04-24%20%E4%B8%8B%E5%8D%881.34.34.png)
+后，即可使用 Touch ID 来授权 `sudo`。
 
 > 这一变更在更新 macOS 系统后会失效。
 
@@ -59,3 +59,15 @@ sudo sed -i ".bak" '2s/^/auth       sufficient     pam_tid.so\'$'\n/g' /etc/pam.
 defaults -currentHost write -g AppleFontSmoothing -int 0
 ```
 
+## 更多强调颜色
+
+Apple 给 iMac (M1) 用户提供了额外的主题色选项，也可以用下面的开关手动打开：
+
+```shell
+defaults write -g NSColorSimulateHardwareAccent -bool YES
+
+# 可选的索引包括 3 ~ 8
+defaults write -g NSColorSimulatedHardwareEnclosureNumber -int 3
+```
+
+打开以上开关后，系统偏好设置的「强调颜色」项会增添额外的颜色选项（「这台 Mac」）。
