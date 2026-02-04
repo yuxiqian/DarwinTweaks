@@ -4,3 +4,5 @@ window-save-state=never
 macos-icon=blueprint
 font-family="等距更纱黑体 SC XLight"
 font-size=19
+cursor-style=block
+shell-integration-features=no-cursor
