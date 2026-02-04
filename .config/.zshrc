@@ -1,6 +1,24 @@
-# Initialize jenv
-eval "$(jenv init - --no-rehash)"
-(jenv rehash &) 2> /dev/null
+# Lazily initialize jenv
+lazy_load_jenv() {
+  unset -f java jenv
+  eval export PATH="${HOME}/.jenv/shims:${PATH}"
+  eval "$(jenv init -)"
+}
+
+jenv() {
+  lazy_load_jenv
+  jenv $@
+}
+
+java() {
+  lazy_load_jenv
+  java $@
+}
+
+mvn() {
+  lazy_load_jenv
+  mvn $@
+}
 
 source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source $(brew --prefix)/share/zsh-history-substring-search/zsh-history-substring-search.zsh
