@@ -1,7 +1,6 @@
 # Lazily initialize jenv
 lazy_load_jenv() {
-  unset -f java jenv
-  eval export PATH="${HOME}/.jenv/shims:${PATH}"
+  unset -f java jenv mvn
   eval "$(jenv init -)"
 }
 
