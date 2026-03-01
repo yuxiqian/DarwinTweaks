@@ -18,3 +18,4 @@ setopt PROMPT_SUBST
 PROMPT='%F{cyan}%n%f %U%~%u %F{cyan}${vcs_info_msg_0_}%f$ '
 
 source "$HOME/.sdkman/bin/sdkman-init.sh"
+export PATH="/opt/homebrew/opt/ruby/bin:$PATH"
