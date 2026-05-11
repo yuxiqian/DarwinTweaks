@@ -1,6 +1,14 @@
 # DarwinTweaks
 一些 macOS Tweaks
 
+## 去掉
+
+去掉 macOS Tahoe 以来莫名其妙的菜单栏图标
+
+```shell
+defaults write -g NSMenuEnableActionImages -bool NO
+```
+
 ## 减少菜单栏图标间距
 
 macOS Big Sur 对图形界面进行了大修改，同时（离谱地）增大了菜单栏图标的间距，对刘海屏非常不友好。
@@ -66,7 +74,7 @@ Apple 给 iMac (M1) 用户提供了额外的主题色选项，也可以用下面
 ```shell
 defaults write -g NSColorSimulateHardwareAccent -bool YES
 
-# 可选的索引包括 3 ~ 8
+# 可选的索引包括 3 ~ 14
 defaults write -g NSColorSimulatedHardwareEnclosureNumber -int 3
 ```
 
