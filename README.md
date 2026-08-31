@@ -19,6 +19,12 @@ defaults write -g NSConvolutionOverride1 -float 9.0 && killall Finder
 defaults write -g NSConvolutionOverride1 -float 4.0 && killall Finder
 ```
 
+使用旧版 Tab 风格
+
+```shell
+defaults write -g NSSolariumWindowTabs -bool NO
+```
+
 ## 减少菜单栏图标间距
 
 macOS Big Sur 对图形界面进行了大修改，同时（离谱地）增大了菜单栏图标的间距，对刘海屏非常不友好。
